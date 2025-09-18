@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAIA-THE BASE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="logo">
+
+            </div>
+            <div class="ul">
+                <ul class="sidebar">
+                    <li onclick="hidesidebar()"><a href="#"><i class="ri-xrp-line"></i></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="#touch">Get In Touch</a></li>
+                   
+                </ul>
+                <ul>
+                    <li class="hideonmobile"><a href="#about">About</a></li>
+                    <li class="hideonmobile"><a href="#projects">Projects</a></li>
+                    <li class="hideonmobile"><a href="./resume.html">Resume</a></li>
+                    <li class="hideonmobile"><a href="#touch">Get In Touch</a></li>
+                  
+                    <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="ri-menu-line"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero-sec">
+            <div class="Intro">
+
+                <div class="hello">
+
+                    <span>Hello</span> <!-- English -->
+                    <span>Hola</span> <!-- Spanish -->
+                    <span>مرحبا</span> <!-- Arabic -->
+                    <span>नमस्ते</span> <!-- Hindi -->
+                    <span>ನಮಸ್ಕಾರ</span> <!-- Kannada -->
+                    <span>Bonjour</span> <!-- French -->
+
+
+                </div>
+                <div class="int">
+                    <h1 id="name1"><i class="ri-terminal-line"></i> Aiman Shariff</h1><br><br>
+                    <h2 id="name2"> FRONTEND WEB-DEVELOPER</h2> <br>
+                    <h2 id="name2">& CREATIVE ARTIST</h2>
+
+                </div>
+                <div class="paragraph">
+                    <p>
+                        I turn concepts into experiences.
+                        With a toolbox packed with HTML, CSS, JavaScript, SCSS,
+                        Tailwind, and GSAP, I engineer interfaces that don’t
+                        just work — they move, flow, and breathe. My artistic
+                        edge fuels my code, blending design instincts with technical
+                        precision to craft visuals that hit harder than plain pixels.
+                        I’m not just shipping projects — I’m building digital art with
+                        logic as my paintbrush.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="Intro-para">
+                <video src="./mockups/meee.mp4" preload="auto" playsinline autoplay loop muted></video>
+            </div>
+        </section>
+    </main>
+
+    <section class="skill-sec">
+
+        <div class="skill-txt">
+            <h1><i class="ri-terminal-line"></i> My Skills.</h1>
+        </div>
+
+        <div class="skills-holder">
+
+            <div class="btn-holder">
+                <div class="btn" onclick="showOrhide()">
+                    <div class="btn-in1">
+                        <h1>(01)</h1>
+                    </div>
+                    <div class="btn-in2">
+                        <h1>Frontend Development</h1>
+                    </div>
+                    <div class="btn-in3">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+
+                <div class="skill-para" id="hide">
+                    <div class="dis">
+                        <p>Frontend isn’t just about code — it’s about crafting worlds users can step into. With HTML,
+                            CSS/SCSS, and JavaScript, I turn concepts into living, breathing interfaces. Every line of
+                            code is designed for clarity, speed, and impact, making websites not just functional, but
+                            unforgettable.</p>
+                    </div>
+                    <div class="lang">
+                        <div class="lang-hld">
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4> CSS</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>SCSS</h4>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-holder">
+                <div class="btn" onclick="showOrhide2()">
+                    <div class="btn-in1">
+                        <h1>(02)</h1>
+                    </div>
+                    <div class="btn-in2">
+                        <h1>Modern Styling</h1>
+                    </div>
+                    <div class="btn-in3">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+
+                <div class="skill-para" id="hide2">
+                    <div class="dis">
+                        <p>Styling is where logic meets art. Using Tailwind CSS, I build sleek, responsive layouts; with
+                            GSAP, I add cinematic motion that flows naturally; and with Locomotive.js, I bring smooth
+                            scroll magic. Together, they transform plain screens into immersive journeys."</p>
+                    </div>
+                    <div class="lang">
+                        <div class="lang-hld">
+                            <h4>Tailwind CSS</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>GSAP</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Locomotive.Js</h4>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-holder">
+                <div class="btn" onclick="showOrhide3()">
+                    <div class="btn-in1">
+                        <h1>(03)</h1>
+                    </div>
+                    <div class="btn-in2">
+                        <h1>Responsive Design</h1>
+                    </div>
+                    <div class="btn-in3">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+
+                <div class="skill-para" id="hide3">
+                    <div class="dis">
+                        <p>
+                            Every pixel matters — no matter the screen size. With Flexbox, Grid, and Media Queries, I
+                            ensure designs stay sharp, balanced, and beautiful on desktops, tablets, and mobiles. I
+                            don’t just make layouts responsive; I make them adaptive to human experience.
+                        </p>
+                    </div>
+                    <div class="lang">
+                        <div class="lang-hld">
+                            <h4>Flexbox</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Grid</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Media-Queries</h4>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-holder">
+                <div class="btn" onclick="showOrhide4()">
+                    <div class="btn-in1">
+                        <h1>(04)</h1>
+                    </div>
+                    <div class="btn-in2">
+                        <h1>Creative Web Design</h1>
+                    </div>
+                    <div class="btn-in3">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+
+                <div class="skill-para" id="hide4">
+                    <div class="dis">
+                        <p>
+                            Great design starts with imagination. Using Canva and Adobe Express, I shape visuals that
+                            carry personality and purpose. From web layouts to branding assets, I bridge the gap between
+                            design and code — making every project look as good as it feels."
+                        </p>
+                    </div>
+                    <div class="lang">
+                        <div class="lang-hld">
+                            <h4>Canva</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Adobe-Express</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Adobe-illustrator</h4>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-holder">
+                <div class="btn" onclick="showOrhide5()">
+                    <div class="btn-in1">
+                        <h1>(05)</h1>
+                    </div>
+                    <div class="btn-in2">
+                        <h1>Sketching & Creative Arts</h1>
+                    </div>
+                    <div class="btn-in3">
+                        <i class="ri-add-line"></i>
+                    </div>
+                </div>
+
+                <div class="skill-para" id="hide5">
+                    <div class="dis">
+                        <p>
+                            Before the code, there’s the sketch. My ability to sketch characters, ideas, and layouts
+                            adds a raw creative layer to my development. It helps me visualize concepts, design mascots,
+                            and craft unique elements that make my projects stand out with originality.
+                        </p>
+                    </div>
+                    <div class="lang">
+                        <div class="lang-hld">
+                            <h4>Pencil Sketching</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>Tattoo art</h4>
+                        </div>
+                        <div class="lang-hld">
+                            <h4>digital Sketch</h4>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="project-sec" id="projects">
+        <div class="pro-txt">
+            <h1><i class="ri-terminal-line"></i> My Works.</h1>
+
+            <a href="">
+                <h3>View more </h3>
+            </a>
+        </div>
+
+        <div class="projects">
+
+            <div class="project-Card" id="project01">
+                <div class="click-txt">
+                    <h5>View Site:</h5>
+                </div>
+                <a href="https://magnetto-portfolio-by-aimanshariff.netlify.app/">
+                    <video src="./mockups/Untitled design.mp4" autoplay loop muted></video>
+                </a>
+            </div>
+            <div class="project-Card" id="project02">
+                <div class="click-txt">
+                    <h5>View Site:</h5>
+                </div>
+                <a href="https://aimanshariff-devfolio.netlify.app/">
+                    <video src="./mockups/myfolio.mp4" autoplay loop muted></video>
+                </a>
+            </div>
+            <div class="project-Card" id="project03">
+                <div class="click-txt">
+                    <h5>View Site:</h5>
+                </div>
+                <a href="https://lush-latte.netlify.app/">
+                    <video src="./mockups/Lush.mp4" autoplay loop muted></video>
+                </a>
+            </div>
+            <div class="project-Card" id="project04">
+                <div class="click-txt">
+                    <h5>View Site:</h5>
+                </div>
+                <a href="https://its-me-aimanshariff.my.canva.site/squid-by-shariff">
+                    <video src="./mockups/squid.mp4" autoplay loop muted></video>
+                </a>
+            </div>
+            <div class="project-Card" id="project05">
+                <div class="click-txt">
+                    <h5>View Site:</h5>
+                </div>
+                <a
+                    href="https://its-aimanshariff-here.github.io/st.xaviers-pu-and-degree-college/?fbclid=PAZXh0bgNhZW0CMTEAAaaqM-t2kPKGsqFJGZ3E4ePgnLZwi9omVO7qnd9KjL_L1Qxzpgr1J0cZSks_aem_pfO5LZ915fbxzGJV-DagIg">
+                    <video src="./mockups/St-xaviers.mp4" autoplay loop muted></video>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="abt-txt" id="about">
+        <!-- <h1>my.identity</h1> -->
+        <h3>It's</h3>
+        <h1><span>mr.</span>shariff</h1>
+        <h4>here</h4>
+        <br>
+        <p>
+            I’m not here to tell you everything about me, just the part that matters
+        </p>
+    </section>
+
+    <section class="My-info">
+        <div class="split-line">
+            <div class="line">
+                <div class="words">It's</div>
+                <div class="words">Aiman</div>
+                <div class="words">Shariff</div>
+                <div class="words">-</div>
+                <div class="words">a soul</div>
+                <div class="words">driven by</div>
+            </div>
+            <div class="line">
+                <div class="words">curiosity,</div>
+                <div class="words">chaos,</div>
+                <div class="words">and</div>
+                <div class="words">the</div>
+                <div class="words">urge</div>
+                <div class="words">to</div>
+                <div class="words">live</div>
+            </div>
+            <div class="line">
+                <div class="words">life</div>
+                <div class="words">beyond</div>
+                <div class="words">the</div>
+                <div class="words">ordinary.</div>
+                <div class="words">I’m</div>
+                <div class="words">not</div>
+                <div class="words">here</div>
+            </div>
+            <div class="line">
+                <div class="words">to just</div>
+                <div class="words">exist,</div>
+                <div class="words">I’m here</div>
+                <div class="words">to feel,</div>
+                <div class="words">to</div>
+
+            </div>
+            <div class="line">
+                <div class="words">explore</div>
+                <div class="words">to push</div>
+                <div class="words">through</div>
+                <div class="words">storms</div>
+                <div class="words">and</div>
+            </div>
+            <div class="line">
+                <div class="words">find</div>
+                <div class="words">meaning</div>
+                <div class="words">in </div>
+                <div class="words">everything</div>
+                <div class="words"> I do</div>
+            </div>
+            <div class="line">
+                <div class="words">I</div>
+                <div class="words">value</div>
+                <div class="words">loyalty,</div>
+                <div class="words">depth,</div>
+                <div class="words">and </div>
+                <div class="words">real </div>
+            </div>
+
+        </div>
+        <div class="split-line">
+
+            <div class="line">
+                <div class="words">connections </div>
+                <div class="words">over </div>
+                <div class="words">anything </div>
+                <div class="words">surface</div>
+
+
+            </div>
+            <div class="line">
+                <div class="words">level.</div>
+                <div class="words">For </div>
+                <div class="words">me,</div>
+                <div class="words">life </div>
+                <div class="words"> isn’t </div>
+                <div class="words">about </div>
+                <div class="words">playing </div>
+
+            </div>
+            <div class="line">
+                <div class="words">it </div>
+                <div class="words">safe </div>
+                <div class="words">— </div>
+                <div class="words">it’s</div>
+                <div class="words"> about</div>
+                <div class="words">impact</div>
+                <div class="words">growth</div>
+                <div class="words">and</div>
+
+            </div>
+            <div class="line">
+                <div class="words">leaving</div>
+                <div class="words">behind</div>
+                <div class="words">a</div>
+                <div class="words">story</div>
+                <div class="words">worth </div>
+            </div>
+            <div class="line">
+                <div class="words">remembering. </div>
+                <div class="words">This</div>
+                <div class="words">is</div>
+                <div class="words">me</div>
+                <div class="words">raw</div>
+
+            </div>
+            <div class="line">
+                <div class="words">unapologetic</div>
+                <div class="words"> and</div>
+                <div class="words">still</div>
+                <div class="words"> evolving.</div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer-sec" id="touch">
+        <div class="footer">
+            <div class="ft-txt1">
+                <h1>Get in touch.</h1>
+            </div>
+            <div class="ft-txt2">
+                <div class="ft-sub1">
+                    <h3>Let's Start a Conversation</h3>
+                    <a href="mailto:aimanshariff.gb@gmail.com">
+                        <h1>Aimanshariff.gb@gmail.com</h1>
+                    </a>
+                </div>
+                <div class="ft-sub2">
+                    <h3>I'm anti-social, but worth following.</h3>
+                    <div class="social">
+                        <a href="https://www.instagram.com/mirza_shariff?igsh=MTl0NmEzeG45a2R6Ng==">
+                            <i class="ri-instagram-line"></i> Instagram
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/aiman-shariff03?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                            <i class="ri-linkedin-box-line"></i> Linkedin
+                        </a>
+                        <a href="https://www.snapchat.com/add/its-bunnny?share_id=JmiJM3rGb1M&locale=en-IN">
+                            <i class="ri-snapchat-line"></i> Snapchat
+                        </a>
+                        <a href="https://x.com/_Mr_Shariff?t=rN7npz5qAzRvxDuknu_Hug&s=09">
+                            <i class="ri-twitter-x-line"></i> x
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="ft-sub3">
+                    <div class="logo">
+                        <div class="logo-img">
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <i class="ri-copyright-line"></i> aimanshariff. all rights reserved 2025
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

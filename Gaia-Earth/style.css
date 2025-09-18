@@ -1,0 +1,2682 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 0px 10px;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "linux";
+  src: url("./fonts/linux-biolinum.regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "king";
+  src: url("./fonts/kingofthieves.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+main nav {
+  height: 8%;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main nav .logo {
+  height: 100%;
+  width: 30vw;
+  background-image: url(./images/M-removebg-preview.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  background-color: bisque;
+  border: 5px solid black;
+}
+main nav .ul {
+  height: 100%;
+  width: 50vw;
+  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  border: 5px solid black;
+}
+main nav .ul .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.384);
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  display: none;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+main nav .ul .sidebar li {
+  width: 100%;
+}
+main nav .ul .sidebar a {
+  width: 100%;
+  font-size: 5vw;
+}
+main nav .ul .hideonmobile {
+  display: none;
+}
+main nav .ul ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+main nav .ul ul a {
+  text-decoration: none;
+  color: bisque;
+  font-family: "linux";
+  text-transform: uppercase;
+  font-size: 1.1vw;
+}
+main nav .ul ul a:hover {
+  color: red;
+}
+main nav .ul ul .menu-button {
+  display: block;
+}
+main nav .ul ul .menu-button i {
+  font-size: 5vw;
+}
+main .hero-sec {
+  height: 92%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+main .hero-sec .Intro {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .hero-sec .Intro .hello {
+  position: relative;
+  text-align: center;
+  height: 10%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 50px;
+  background-color: bisque;
+  margin-top: 15px;
+}
+main .hero-sec .Intro .hello span {
+  position: absolute;
+  opacity: 0;
+  animation: fade 7.2s infinite;
+  font-family: "linux";
+  font-weight: 100;
+  color: black;
+  font-size: 4vw;
+}
+main .hero-sec .Intro .hello span:nth-child(1) {
+  animation-delay: 0s;
+}
+main .hero-sec .Intro .hello span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+main .hero-sec .Intro .hello span:nth-child(3) {
+  animation-delay: 2.4s;
+}
+main .hero-sec .Intro .hello span:nth-child(4) {
+  animation-delay: 3.6s;
+}
+main .hero-sec .Intro .hello span:nth-child(5) {
+  animation-delay: 4.8s;
+}
+main .hero-sec .Intro .hello span:nth-child(6) {
+  animation-delay: 6s;
+}
+main .hero-sec .Intro .int {
+  height: 30%;
+  width: 100%;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hero-sec .Intro .int h1 {
+  font-family: "king";
+  font-weight: 100;
+  font-size: 8.2vw;
+  color: red;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+main .hero-sec .Intro .int h1 i {
+  color: red;
+  font-family: "linux";
+}
+main .hero-sec .Intro .int h2 {
+  font-family: "linux";
+  font-weight: 100;
+  font-size: 5.5vw;
+  text-align: center;
+}
+main .hero-sec .Intro .paragraph {
+  height: 40%;
+  width: 100%;
+  border-radius: 25px;
+  border: 3px solid rgb(0, 0, 0);
+  background-color: bisque;
+  text-align: center;
+}
+main .hero-sec .Intro .paragraph p {
+  font-family: "linux";
+  height: 100%;
+  width: 100%;
+  font-size: 3vw;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+main .hero-sec .Intro-para {
+  height: 30%;
+  width: 100%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hero-sec .Intro-para video {
+  height: 100%;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+
+.skill-sec {
+  padding: 1rem 1rem;
+  width: 100%;
+}
+.skill-sec .skill-txt {
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.skill-sec .skill-txt h1 {
+  font-family: "linux";
+  font-size: 7vw;
+  font-weight: 100;
+  color: bisque;
+}
+.skill-sec .skill-txt h1 i {
+  font-weight: 100;
+}
+.skill-sec .skills-holder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.skill-sec .skills-holder .btn-holder {
+  width: 100%;
+}
+.skill-sec .skills-holder .btn-holder .btn {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+  display: flex;
+  justify-content: center;
+}
+.skill-sec .skills-holder .btn-holder .btn .btn-in1 {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.skill-sec .skills-holder .btn-holder .btn .btn-in1 h1 {
+  font-family: "linux";
+  font-size: 6vw;
+}
+.skill-sec .skills-holder .btn-holder .btn .btn-in2 {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.skill-sec .skills-holder .btn-holder .btn .btn-in2 h1 {
+  font-family: "linux";
+  font-size: 6vw;
+}
+.skill-sec .skills-holder .btn-holder .btn .btn-in3 {
+  height: 100%;
+  width: 20%;
+  background-color: #fff;
+  display: none;
+}
+.skill-sec .skills-holder .btn-holder .skill-para {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.skill-sec .skills-holder .btn-holder .skill-para .dis {
+  height: 250px;
+  width: 100%;
+  padding: 10px 15px;
+}
+.skill-sec .skills-holder .btn-holder .skill-para .dis p {
+  font-family: "linux";
+  font-weight: 100;
+  font-size: 4.5vw;
+  text-align: start;
+  line-height: 30px;
+}
+.skill-sec .skills-holder .btn-holder .skill-para .lang {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 10px 10px;
+}
+.skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld {
+  height: 35px;
+  width: 100px;
+  border: 1px solid white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 2px;
+}
+.skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld h4 {
+  font-family: "linux";
+  font-weight: 100;
+  font-size: 3vw;
+}
+
+.project-sec {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 1rem;
+}
+.project-sec .pro-txt {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.project-sec .pro-txt h1 {
+  font-family: "linux";
+  font-size: 7vw;
+  font-weight: 100;
+  color: bisque;
+}
+.project-sec .pro-txt h1 i {
+  font-weight: 100;
+}
+.project-sec .pro-txt a {
+  display: none;
+}
+.project-sec .projects {
+  width: 100%;
+}
+.project-sec .projects .project-Card {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  border: 2px solid bisque;
+  border-radius: 25px;
+  background-color: #2C2E2D;
+  padding: 1px 1px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-sec .projects .project-Card .click-txt {
+  height: 3vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-sec .projects .project-Card .click-txt h5 {
+  font-size: 4vw;
+  font-family: "linux";
+  font-weight: 200;
+  color: bisque;
+}
+.project-sec .projects .project-Card video {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+.project-sec .projects #project02 {
+  background-color: black;
+}
+.project-sec .projects #project03 {
+  background-color: #513B34;
+}
+.project-sec .projects #project04 {
+  background-color: black;
+}
+.project-sec .projects #project05 {
+  background-color: black;
+}
+
+.abt-txt {
+  height: 30vh;
+  width: 100%;
+  padding: 1rem 1rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.abt-txt h1 {
+  font-size: 3.5vh;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: bisque;
+}
+.abt-txt h1 span {
+  color: red;
+  font-size: 4vh;
+}
+.abt-txt h4 {
+  text-align: center;
+}
+.abt-txt p {
+  text-align: center;
+  color: black;
+  font-family: "linux";
+  font-weight: 500;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  height: 7vh;
+  width: 100%;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  font-size: 3.5vw;
+  background-color: bisque;
+}
+
+.My-info {
+  width: 100%;
+  padding: 0rem 1rem;
+}
+.My-info .split-line {
+  width: 100%;
+  font-family: "linux";
+  font-size: 5vw;
+  margin-top: 2rem;
+  font-weight: 100;
+}
+.My-info .split-line .line {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  padding: 5px 5px;
+  justify-content: start;
+}
+.My-info .split-line .line .words {
+  height: -moz-fit-content;
+  height: fit-content;
+  color: rgba(128, 128, 128, 0.423);
+}
+
+.footer-sec {
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: bisque;
+}
+.footer-sec .footer {
+  height: 80vh;
+  width: 90%;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: black;
+}
+.footer-sec .footer .ft-txt1 {
+  height: 15vh;
+  width: 100%;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+.footer-sec .footer .ft-txt1 h1 {
+  font-size: 12vw;
+  font-family: "linux";
+}
+.footer-sec .footer .ft-txt2 {
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-sec .footer .ft-txt2 .ft-sub1 {
+  height: 13vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 10px;
+  gap: 10px;
+}
+.footer-sec .footer .ft-txt2 .ft-sub1 h3 {
+  font-size: 3vw;
+  color: rgba(255, 255, 255, 0.723);
+  font-family: "linux";
+}
+.footer-sec .footer .ft-txt2 .ft-sub1 a {
+  text-decoration: none;
+  color: bisque;
+  font-family: "linux";
+  font-size: 3vw;
+}
+.footer-sec .footer .ft-txt2 .ft-sub2 {
+  height: 32vh;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px 10px;
+  gap: 10px;
+}
+.footer-sec .footer .ft-txt2 .ft-sub2 h3 {
+  font-size: 4vw;
+  color: rgba(255, 255, 255, 0.827);
+  font-family: "linux";
+}
+.footer-sec .footer .ft-txt2 .ft-sub2 .social {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+.footer-sec .footer .ft-txt2 .ft-sub2 .social a {
+  text-decoration: none;
+  color: bisque;
+  font-size: 5vw;
+}
+.footer-sec .footer .ft-sub3 {
+  height: 10vh;
+  width: 100%;
+  background-color: bisque;
+  border-radius: 25px;
+  padding: 10px 10px;
+  border: 2px solid black;
+}
+.footer-sec .footer .ft-sub3 .logo {
+  height: 50%;
+  width: 100%;
+}
+.footer-sec .footer .ft-sub3 .logo .logo-img {
+  height: 100%;
+  width: 70%;
+  background-image: url(./images/M-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+.footer-sec .footer .ft-sub3 .copyright {
+  height: 50%;
+  width: 100%;
+  color: black;
+  font-family: "linux";
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.footer-sec .footer .ft-sub3 .copyright i {
+  color: black;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 5rem;
+  }
+  main nav {
+    height: 10%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+  }
+  main nav .logo {
+    height: 100%;
+    width: 30vw;
+    background-image: url(./images/M-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    background-color: bisque;
+    border: 5px solid black;
+  }
+  main nav .ul {
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+  }
+  main nav .ul .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  main nav .ul .sidebar li {
+    width: 100%;
+  }
+  main nav .ul .sidebar a {
+    width: 100%;
+    font-size: 3vw;
+  }
+  main nav .ul .hideonmobile {
+    display: none;
+  }
+  main nav .ul ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+  }
+  main nav .ul ul a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    text-transform: uppercase;
+    font-size: 1.1vw;
+  }
+  main nav .ul ul a:hover {
+    color: red;
+  }
+  main nav .ul ul .menu-button {
+    display: block;
+  }
+  main nav .ul ul .menu-button i {
+    font-size: 4vw;
+  }
+  main .hero-sec {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  main .hero-sec .Intro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .hero-sec .Intro .hello {
+    position: relative;
+    text-align: center;
+    height: 8%;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: bisque;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .hello span {
+    position: absolute;
+    opacity: 0;
+    animation: fade 7.2s infinite;
+    font-family: "linux";
+    font-weight: 100;
+    color: black;
+    font-size: 2vw;
+  }
+  main .hero-sec .Intro .hello span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(3) {
+    animation-delay: 2.4s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(4) {
+    animation-delay: 3.6s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(5) {
+    animation-delay: 4.8s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(6) {
+    animation-delay: 6s;
+  }
+  main .hero-sec .Intro .int {
+    height: 42%;
+    width: 100%;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .hero-sec .Intro .int h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 8vw;
+    color: red;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: start;
+  }
+  main .hero-sec .Intro .int h1 i {
+    color: red;
+    font-family: "linux";
+  }
+  main .hero-sec .Intro .int h2 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 5.5vw;
+    text-align: start;
+  }
+  main .hero-sec .Intro .paragraph {
+    height: 25%;
+    width: 60%;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: bisque;
+    text-align: center;
+    margin-left: 50%;
+  }
+  main .hero-sec .Intro .paragraph p {
+    font-family: "linux";
+    height: 100%;
+    width: 100%;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  main .hero-sec .Intro-para {
+    height: 40%;
+    width: 100%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+  .skill-sec {
+    padding: 1rem 8rem;
+    width: 100%;
+  }
+  .skill-sec .skill-txt {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skill-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .skill-sec .skill-txt h1 i {
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+  .skill-sec .skills-holder .btn-holder {
+    width: 80%;
+    cursor: pointer;
+    margin-right: 3rem;
+  }
+  .skill-sec .skills-holder .btn-holder .btn {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 h1 {
+    font-family: "linux";
+    font-size: 2.5vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 h1 {
+    font-family: "linux";
+    font-size: 2.5vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 {
+    height: 100%;
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 i {
+    font-size: 2vw;
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    padding-top: 2rem;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis {
+    height: 185px;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis p {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1.5vw;
+    text-align: start;
+    line-height: 30px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px 10px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld {
+    height: 35px;
+    width: 120px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld h4 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1vw;
+  }
+  .project-sec {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem 8rem;
+  }
+  .project-sec .pro-txt {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-sec .pro-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .project-sec .pro-txt h1 i {
+    font-weight: 100;
+  }
+  .project-sec .pro-txt a {
+    display: block;
+    color: bisque;
+  }
+  .project-sec .projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .project-sec .projects .project-Card {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    background-color: #2C2E2D;
+    padding: 1px 1px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  .project-sec .projects .project-Card .click-txt {
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-sec .projects .project-Card .click-txt h5 {
+    font-size: 2vw;
+    font-family: "linux";
+    font-weight: 200;
+    color: bisque;
+  }
+  .project-sec .projects .project-Card video {
+    height: 80%;
+    width: 100%;
+    border-radius: 25px;
+  }
+  .project-sec .projects #project02 {
+    background-color: black;
+  }
+  .project-sec .projects #project03 {
+    background-color: #513B34;
+  }
+  .project-sec .projects #project04 {
+    background-color: black;
+  }
+  .project-sec .projects #project05 {
+    background-color: black;
+  }
+  .My-info {
+    width: 100%;
+    padding: 1rem 8rem;
+    display: flex;
+  }
+  .My-info .split-line {
+    width: 100%;
+    font-family: "linux";
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+  }
+  .My-info .split-line .line {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding: 5px 5px;
+    justify-content: start;
+  }
+  .My-info .split-line .line .words {
+    height: -moz-fit-content;
+    height: fit-content;
+    color: rgba(128, 128, 128, 0.347);
+  }
+  .footer-sec {
+    height: 90vh;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: bisque;
+  }
+  .footer-sec .footer {
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt1 {
+    height: 15vh;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-sec .footer .ft-txt1 h1 {
+    font-size: 5vw;
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 {
+    height: 13vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 h3 {
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.723);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 {
+    height: 32vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 h3 {
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.827);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social {
+    height: 30vh;
+    width: 100%;
+    margin-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social a {
+    text-decoration: none;
+    color: bisque;
+    font-size: 1.5vw;
+  }
+  .footer-sec .footer .ft-sub3 {
+    height: 15vh;
+    width: 100%;
+    background-color: bisque;
+    border-radius: 25px;
+    padding: 10px 10px;
+  }
+  .footer-sec .footer .ft-sub3 .logo {
+    height: 50%;
+    width: 50%;
+  }
+  .footer-sec .footer .ft-sub3 .logo .logo-img {
+    height: 100%;
+    width: 50%;
+    background-image: url(./images/M-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright {
+    height: 50%;
+    width: 100%;
+    color: black;
+    font-family: "linux";
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright i {
+    color: black;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 8rem;
+  }
+  main nav {
+    height: 8%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+  }
+  main nav .logo {
+    height: 100%;
+    width: 15vw;
+    background-image: url(./images/M-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    background-color: bisque;
+    border: 5px solid black;
+  }
+  main nav .ul {
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+  }
+  main nav .ul .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  main nav .ul .sidebar li {
+    width: 100%;
+  }
+  main nav .ul .sidebar a {
+    width: 100%;
+  }
+  main nav .ul ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main nav .ul ul a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    text-transform: uppercase;
+    font-size: 1.1vw;
+  }
+  main nav .ul ul a:hover {
+    color: red;
+  }
+  main nav .ul ul .hideonmobile {
+    display: block;
+  }
+  main nav .ul ul .menu-button {
+    display: none;
+  }
+  main .hero-sec {
+    height: 92%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  main .hero-sec .Intro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .hero-sec .Intro .hello {
+    position: relative;
+    text-align: center;
+    height: 8%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: bisque;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .hello span {
+    position: absolute;
+    opacity: 0;
+    animation: fade 7.2s infinite;
+    font-family: "linux";
+    font-weight: 100;
+    color: black;
+    font-size: 1.5vw;
+  }
+  main .hero-sec .Intro .hello span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(3) {
+    animation-delay: 2.4s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(4) {
+    animation-delay: 3.6s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(5) {
+    animation-delay: 4.8s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(6) {
+    animation-delay: 6s;
+  }
+  main .hero-sec .Intro .int {
+    height: 42%;
+    width: 100%;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .hero-sec .Intro .int h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 6.5vw;
+    color: red;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: start;
+  }
+  main .hero-sec .Intro .int h1 i {
+    color: red;
+    font-family: "linux";
+  }
+  main .hero-sec .Intro .int h2 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 4.5vw;
+    text-align: start;
+  }
+  main .hero-sec .Intro .paragraph {
+    height: 30%;
+    width: 50%;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: bisque;
+    text-align: center;
+    margin-left: 50%;
+  }
+  main .hero-sec .Intro .paragraph p {
+    font-family: "linux";
+    height: 100%;
+    width: 100%;
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  main .hero-sec .Intro-para {
+    height: 40%;
+    width: 100%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+  .skill-sec {
+    padding: 1rem 8rem;
+    width: 100%;
+  }
+  .skill-sec .skill-txt {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skill-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .skill-sec .skill-txt h1 i {
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+  .skill-sec .skills-holder .btn-holder {
+    width: 60%;
+    cursor: pointer;
+    margin-right: 5rem;
+  }
+  .skill-sec .skills-holder .btn-holder .btn {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+    display: flex;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 {
+    height: 100%;
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 i {
+    font-size: 2vw;
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    padding-top: 2rem;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis {
+    height: 150px;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis p {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1.3vw;
+    text-align: start;
+    line-height: 30px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px 10px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld {
+    height: 35px;
+    width: 120px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld h4 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1vw;
+  }
+  .project-sec {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem 8rem;
+  }
+  .project-sec .pro-txt {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-sec .pro-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .project-sec .pro-txt h1 i {
+    font-weight: 100;
+  }
+  .project-sec .pro-txt a {
+    display: block;
+    color: bisque;
+  }
+  .project-sec .projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .project-sec .projects .project-Card {
+    height: 70vh;
+    width: 80%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    background-color: #2C2E2D;
+    padding: 1px 1px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+  }
+  .project-sec .projects .project-Card .click-txt {
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-sec .projects .project-Card .click-txt h5 {
+    font-size: 1.5vw;
+    font-family: "linux";
+    font-weight: 200;
+    color: bisque;
+  }
+  .project-sec .projects .project-Card video {
+    height: 80%;
+    width: 100%;
+  }
+  .project-sec .projects #project02 {
+    background-color: black;
+  }
+  .project-sec .projects #project03 {
+    background-color: #513B34;
+  }
+  .project-sec .projects #project04 {
+    background-color: black;
+  }
+  .project-sec .projects #project05 {
+    background-color: black;
+  }
+  .My-info {
+    width: 100%;
+    padding: 1rem 8rem;
+    display: flex;
+  }
+  .My-info .split-line {
+    width: 100%;
+    font-family: "linux";
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+  }
+  .My-info .split-line .line {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding: 5px 5px;
+    justify-content: start;
+  }
+  .My-info .split-line .line .words {
+    height: -moz-fit-content;
+    height: fit-content;
+    color: rgba(128, 128, 128, 0.347);
+  }
+}
+@media (min-width: 1367px) and (max-width: 1600px) {
+  main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 8rem;
+  }
+  main nav {
+    height: 10%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main nav .logo {
+    height: 100%;
+    width: 15vw;
+    background-image: url(./images/M-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    background-color: bisque;
+    border: 5px solid black;
+  }
+  main nav .ul {
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+  }
+  main nav .ul .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  main nav .ul .sidebar li {
+    width: 100%;
+  }
+  main nav .ul .sidebar a {
+    width: 100%;
+  }
+  main nav .ul ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main nav .ul ul a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    text-transform: uppercase;
+    font-size: 1.1vw;
+  }
+  main nav .ul ul a:hover {
+    color: red;
+  }
+  main nav .ul ul .hideonmobile {
+    display: block;
+  }
+  main nav .ul ul .menu-button {
+    display: none;
+  }
+  main .hero-sec {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  main .hero-sec .Intro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .hero-sec .Intro .hello {
+    position: relative;
+    text-align: center;
+    height: 8%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: bisque;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .hello span {
+    position: absolute;
+    opacity: 0;
+    animation: fade 7.2s infinite;
+    font-family: "linux";
+    font-weight: 100;
+    color: black;
+    font-size: 1.5vw;
+  }
+  main .hero-sec .Intro .hello span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(3) {
+    animation-delay: 2.4s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(4) {
+    animation-delay: 3.6s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(5) {
+    animation-delay: 4.8s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(6) {
+    animation-delay: 6s;
+  }
+  main .hero-sec .Intro .int {
+    height: 42%;
+    width: 100%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .int h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 6.5vw;
+    color: red;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: start;
+  }
+  main .hero-sec .Intro .int h1 i {
+    color: red;
+    font-family: "linux";
+  }
+  main .hero-sec .Intro .int h2 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 4.5vw;
+    text-align: start;
+  }
+  main .hero-sec .Intro .paragraph {
+    height: 30%;
+    width: 50%;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: bisque;
+    text-align: center;
+    margin-left: 50%;
+  }
+  main .hero-sec .Intro .paragraph p {
+    font-family: "linux";
+    height: 100%;
+    width: 100%;
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  main .hero-sec .Intro-para {
+    height: 40%;
+    width: 100%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+  .skill-sec {
+    padding: 1rem 8rem;
+    width: 100%;
+  }
+  .skill-sec .skill-txt {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skill-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .skill-sec .skill-txt h1 i {
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+  .skill-sec .skills-holder .btn-holder {
+    width: 60%;
+    cursor: pointer;
+    margin-right: 5rem;
+  }
+  .skill-sec .skills-holder .btn-holder .btn {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+    display: flex;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 {
+    height: 100%;
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 i {
+    font-size: 2vw;
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    padding-top: 2rem;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis {
+    height: 150px;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis p {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1.3vw;
+    text-align: start;
+    line-height: 30px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px 10px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld {
+    height: 35px;
+    width: 120px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld h4 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1vw;
+  }
+  .project-sec {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem 8rem;
+  }
+  .project-sec .pro-txt {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-sec .pro-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .project-sec .pro-txt h1 i {
+    font-weight: 100;
+  }
+  .project-sec .pro-txt a {
+    display: block;
+    color: bisque;
+  }
+  .project-sec .projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .project-sec .projects .project-Card {
+    height: 70vh;
+    width: 80%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    background-color: #2C2E2D;
+    padding: 1px 1px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .project-sec .projects .project-Card .click-txt {
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-sec .projects .project-Card .click-txt h5 {
+    font-size: 2vw;
+    font-family: "linux";
+    font-weight: 200;
+    color: bisque;
+  }
+  .project-sec .projects .project-Card video {
+    height: 80%;
+    width: 100%;
+  }
+  .project-sec .projects #project02 {
+    background-color: black;
+  }
+  .project-sec .projects #project03 {
+    background-color: #513B34;
+  }
+  .project-sec .projects #project04 {
+    background-color: black;
+  }
+  .project-sec .projects #project05 {
+    background-color: black;
+  }
+  .abt-txt {
+    margin-top: 1rem;
+    height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 8rem;
+  }
+  .abt-txt h1 {
+    font-size: 10vh;
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: bisque;
+  }
+  .abt-txt h1 span {
+    color: red;
+    font-size: 13vh;
+  }
+  .abt-txt h3 {
+    font-size: 4vw;
+    font-family: "linux";
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  .abt-txt h4 {
+    text-align: start;
+    font-size: 2.5vw;
+    font-family: "linux";
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 22rem;
+  }
+  .abt-txt p {
+    text-align: center;
+    color: black;
+    font-family: "linux";
+    font-weight: 200;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 10vh;
+    width: 70%;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vw;
+    background-color: bisque;
+  }
+  .My-info {
+    width: 100%;
+    padding: 1rem 8rem;
+    display: flex;
+  }
+  .My-info .split-line {
+    width: 100%;
+    font-family: "linux";
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+  }
+  .My-info .split-line .line {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding: 5px 5px;
+    justify-content: start;
+  }
+  .My-info .split-line .line .words {
+    height: -moz-fit-content;
+    height: fit-content;
+    color: rgba(128, 128, 128, 0.347);
+  }
+  .footer-sec {
+    height: 90vh;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: bisque;
+  }
+  .footer-sec .footer {
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt1 {
+    height: 15vh;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-sec .footer .ft-txt1 h1 {
+    font-size: 5vw;
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 {
+    height: 13vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 h3 {
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.723);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 {
+    height: 32vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 h3 {
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.827);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social {
+    height: 30vh;
+    width: 100%;
+    margin-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social a {
+    text-decoration: none;
+    color: bisque;
+    font-size: 1.5vw;
+  }
+  .footer-sec .footer .ft-sub3 {
+    height: 15vh;
+    width: 100%;
+    background-color: bisque;
+    border-radius: 25px;
+    padding: 10px 10px;
+  }
+  .footer-sec .footer .ft-sub3 .logo {
+    height: 50%;
+    width: 50%;
+  }
+  .footer-sec .footer .ft-sub3 .logo .logo-img {
+    height: 100%;
+    width: 50%;
+    background-image: url(./images/M-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright {
+    height: 50%;
+    width: 100%;
+    color: black;
+    font-family: "linux";
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright i {
+    color: black;
+  }
+}
+@media (min-width: 1600px) and (max-width: 2560px) {
+  main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 8rem;
+  }
+  main nav {
+    height: 8%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main nav .logo {
+    height: 100%;
+    width: 15vw;
+    background-image: url(./images/M-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    background-color: bisque;
+    border: 5px solid black;
+  }
+  main nav .ul {
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+  }
+  main nav .ul .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  main nav .ul .sidebar li {
+    width: 100%;
+  }
+  main nav .ul .sidebar a {
+    width: 100%;
+  }
+  main nav .ul ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main nav .ul ul a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    text-transform: uppercase;
+    font-size: 1.1vw;
+  }
+  main nav .ul ul a:hover {
+    color: red;
+  }
+  main nav .ul ul .hideonmobile {
+    display: block;
+  }
+  main nav .ul ul .menu-button {
+    display: none;
+  }
+  main .hero-sec {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  main .hero-sec .Intro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .hero-sec .Intro .hello {
+    position: relative;
+    text-align: center;
+    height: 8%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: bisque;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .hello span {
+    position: absolute;
+    opacity: 0;
+    animation: fade 7.2s infinite;
+    font-family: "linux";
+    font-weight: 100;
+    color: black;
+    font-size: 1.5vw;
+  }
+  main .hero-sec .Intro .hello span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(3) {
+    animation-delay: 2.4s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(4) {
+    animation-delay: 3.6s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(5) {
+    animation-delay: 4.8s;
+  }
+  main .hero-sec .Intro .hello span:nth-child(6) {
+    animation-delay: 6s;
+  }
+  main .hero-sec .Intro .int {
+    height: 42%;
+    width: 100%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  main .hero-sec .Intro .int h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 6.5vw;
+    color: red;
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: start;
+  }
+  main .hero-sec .Intro .int h1 i {
+    color: red;
+    font-family: "linux";
+  }
+  main .hero-sec .Intro .int h2 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 4.5vw;
+    text-align: start;
+  }
+  main .hero-sec .Intro .paragraph {
+    height: 30%;
+    width: 50%;
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: bisque;
+    text-align: center;
+    margin-left: 50%;
+  }
+  main .hero-sec .Intro .paragraph p {
+    font-family: "linux";
+    height: 100%;
+    width: 100%;
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  main .hero-sec .Intro-para {
+    height: 40%;
+    width: 100%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+  .skill-sec {
+    padding: 1rem 8rem;
+    width: 100%;
+  }
+  .skill-sec .skill-txt {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skill-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .skill-sec .skill-txt h1 i {
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+  .skill-sec .skills-holder .btn-holder {
+    width: 60%;
+    cursor: pointer;
+    margin-right: 5rem;
+  }
+  .skill-sec .skills-holder .btn-holder .btn {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+    display: flex;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in1 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in2 h1 {
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 {
+    height: 100%;
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill-sec .skills-holder .btn-holder .btn .btn-in3 i {
+    font-size: 2vw;
+    font-weight: 100;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    padding-top: 2rem;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis {
+    height: 150px;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .dis p {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1.3vw;
+    text-align: start;
+    line-height: 30px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 10px 10px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld {
+    height: 35px;
+    width: 120px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px;
+  }
+  .skill-sec .skills-holder .btn-holder .skill-para .lang .lang-hld h4 {
+    font-family: "linux";
+    font-weight: 100;
+    font-size: 1vw;
+  }
+  .project-sec {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem 8rem;
+  }
+  .project-sec .pro-txt {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-sec .pro-txt h1 {
+    font-family: "linux";
+    font-size: 4vw;
+    font-weight: 100;
+    color: bisque;
+  }
+  .project-sec .pro-txt h1 i {
+    font-weight: 100;
+  }
+  .project-sec .pro-txt a {
+    display: block;
+    color: bisque;
+  }
+  .project-sec .projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  .project-sec .projects .project-Card {
+    height: 70vh;
+    width: 80%;
+    border: 2px solid bisque;
+    border-radius: 25px;
+    background-color: #2C2E2D;
+    padding: 1px 1px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .project-sec .projects .project-Card .click-txt {
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-sec .projects .project-Card .click-txt h5 {
+    font-size: 2vw;
+    font-family: "linux";
+    font-weight: 200;
+    color: bisque;
+  }
+  .project-sec .projects .project-Card video {
+    height: 80%;
+    width: 100%;
+  }
+  .project-sec .projects #project02 {
+    background-color: black;
+  }
+  .project-sec .projects #project03 {
+    background-color: #513B34;
+  }
+  .project-sec .projects #project04 {
+    background-color: black;
+  }
+  .project-sec .projects #project05 {
+    background-color: black;
+  }
+  .abt-txt {
+    margin-top: 1rem;
+    height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 8rem;
+  }
+  .abt-txt h1 {
+    font-size: 10vh;
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: bisque;
+  }
+  .abt-txt h1 span {
+    color: red;
+    font-size: 13vh;
+  }
+  .abt-txt h3 {
+    font-size: 4vw;
+    font-family: "linux";
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  .abt-txt h4 {
+    text-align: start;
+    font-size: 2.5vw;
+    font-family: "linux";
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 22rem;
+  }
+  .abt-txt p {
+    text-align: center;
+    color: black;
+    font-family: "linux";
+    font-weight: 200;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 10vh;
+    width: 70%;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vw;
+    background-color: bisque;
+  }
+  .My-info {
+    width: 100%;
+    padding: 1rem 8rem;
+    display: flex;
+  }
+  .My-info .split-line {
+    width: 100%;
+    font-family: "linux";
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+  }
+  .My-info .split-line .line {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding: 5px 5px;
+    justify-content: start;
+  }
+  .My-info .split-line .line .words {
+    height: -moz-fit-content;
+    height: fit-content;
+    color: rgba(128, 128, 128, 0.347);
+  }
+  .footer-sec {
+    height: 90vh;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: bisque;
+  }
+  .footer-sec .footer {
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt1 {
+    height: 15vh;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-sec .footer .ft-txt1 h1 {
+    font-size: 5vw;
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 {
+    height: 13vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 h3 {
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.723);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub1 a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "linux";
+    font-size: 2vw;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 {
+    height: 32vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 h3 {
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.827);
+    font-family: "linux";
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social {
+    height: 30vh;
+    width: 100%;
+    margin-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .footer-sec .footer .ft-txt2 .ft-sub2 .social a {
+    text-decoration: none;
+    color: bisque;
+    font-size: 1.5vw;
+  }
+  .footer-sec .footer .ft-sub3 {
+    height: 15vh;
+    width: 100%;
+    background-color: bisque;
+    border-radius: 25px;
+    padding: 10px 10px;
+  }
+  .footer-sec .footer .ft-sub3 .logo {
+    height: 50%;
+    width: 50%;
+  }
+  .footer-sec .footer .ft-sub3 .logo .logo-img {
+    height: 100%;
+    width: 50%;
+    background-image: url(./images/M-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright {
+    height: 50%;
+    width: 100%;
+    color: black;
+    font-family: "linux";
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  .footer-sec .footer .ft-sub3 .copyright i {
+    color: black;
+  }
+}/*# sourceMappingURL=style.css.map */

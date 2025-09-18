@@ -1,0 +1,1174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  position: relative;
+}
+
+@font-face {
+  font-family: "all";
+  src: url("./fonts/THE GONjURING.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rush";
+  src: url("./fonts/qussro.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "king";
+  src: url("./fonts/kingofthieves.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.main {
+  width: 100%;
+  color: white;
+}
+.main .robo-hld {
+  height: 100vh;
+  width: 200%;
+  background-color: #000000;
+}
+.main .robo-hld .robo {
+  position: absolute;
+  z-index: 5;
+  height: 40%;
+  width: 200%;
+  left: -50%;
+  margin-top: 25vh;
+}
+.main .layer {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 1rem 0rem;
+}
+.main .layer .layer-holder {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+}
+.main .layer .layer-holder .Sr-txt {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+.main .layer .layer-holder .Sr-txt h1 {
+  font-family: "all";
+  font-weight: 100;
+  font-size: 5vw;
+}
+.main .layer .layer-holder .Sr-txt h1 span {
+  color: #D2042D;
+  margin-left: 1.5rem;
+  font-size: 6vw;
+}
+.main .layer .layer-holder .sk-txt {
+  height: 10vh;
+  width: 100%;
+  margin-left: 0rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .layer .layer-holder .sk-txt h3 {
+  font-family: "all";
+  font-weight: 100;
+  font-size: 5vw;
+}
+.main .layer .btns {
+  height: 25vh;
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  margin-bottom: 8rem;
+}
+.main .layer .btns .btn-cont1 {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .layer .btns .btn-cont2 {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main .layer .btns button {
+  position: relative;
+  width: 30vw;
+  height: 5.5vh;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
+  border: none;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ddebf0;
+}
+.main .layer .btns button #clip {
+  --color: beige;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px beige;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.main .layer .btns button .arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: beige;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+.main .layer .btns button #leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+.main .layer .btns button #rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+.main .layer .btns button .corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: beige;
+  box-shadow: inset 1px 1px 8px beige;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+.main .layer .btns button #rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+.main .layer .btns button #leftTop {
+  top: -1.96em;
+  left: -3em;
+}
+.main .layer .btns button #leftBottom {
+  top: 2.1em;
+  left: -2.15em;
+}
+.main .layer .btns button #rightBottom {
+  top: 45%;
+  left: 88%;
+}
+.main .layer .btns button:hover #rightArrow {
+  background-color: #c60222;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+.main .layer .btns button:hover #leftArrow {
+  background-color: #c60222;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+.main .layer .btns button:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+}
+.main .layer .btns button:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+}
+.main .layer .btns button:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+}
+.main .layer .btns button:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+}
+.main .layer .btns button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+.main .layer .btns button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #c60222;
+}
+@keyframes changeColor8 {
+  from {
+    background-color: beige;
+  }
+  to {
+    background-color: #c60222;
+  }
+}
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #c60222;
+  }
+  to {
+    box-shadow: 0 0 2px #c60222;
+  }
+}
+@keyframes greenLight8 {
+  to {
+    box-shadow: inset 0px 0px 32px #c60222;
+  }
+}
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  .main {
+    width: 100%;
+    color: white;
+  }
+  .main .robo-hld {
+    height: 100vh;
+    width: 200%;
+    background-color: #000000;
+  }
+  .main .robo-hld .robo {
+    border: 5px solid black;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 200%;
+    left: -20%;
+    right: -80%;
+    margin-top: 0rem;
+    display: block;
+  }
+  .main .layer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 1rem;
+  }
+  .main .layer .layer-holder {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .main .layer .layer-holder .Sr-txt {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 2rem;
+  }
+  .main .layer .layer-holder .Sr-txt h1 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 3vw;
+    color: bisque;
+  }
+  .main .layer .layer-holder .Sr-txt h1 span {
+    color: #D2042D;
+    margin-left: 5rem;
+    font-size: 3.5vw;
+  }
+  .main .layer .layer-holder .sk-txt {
+    height: 15vh;
+    width: 40vw;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .layer .layer-holder .sk-txt h3 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 2.5vw;
+    color: bisque;
+  }
+  .main .layer .btns {
+    height: 25vh;
+    width: 60%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    margin-bottom: 6rem;
+  }
+  .main .layer .btns .btn-cont1 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .layer .btns .btn-cont2 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main .layer .btns button {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+  }
+  .main .layer .btns button #clip {
+    --color: beige;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px beige;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  .main .layer .btns button .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: beige;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+  }
+  .main .layer .btns button #leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  .main .layer .btns button #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+  }
+  .main .layer .btns button .corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: beige;
+    box-shadow: inset 1px 1px 8px beige;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  .main .layer .btns button #rightTop {
+    top: -1.98em;
+    left: 91%;
+  }
+  .main .layer .btns button #leftTop {
+    top: -1.96em;
+    left: -3em;
+  }
+  .main .layer .btns button #leftBottom {
+    top: 2.1em;
+    left: -2.15em;
+  }
+  .main .layer .btns button #rightBottom {
+    top: 45%;
+    left: 88%;
+  }
+  .main .layer .btns button:hover #rightArrow {
+    background-color: #c60222;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  .main .layer .btns button:hover #leftArrow {
+    background-color: #c60222;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  .main .layer .btns button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  .main .layer .btns button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #c60222;
+  }
+  @keyframes changeColor8 {
+    from {
+      background-color: beige;
+    }
+    to {
+      background-color: #c60222;
+    }
+  }
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px #c60222;
+    }
+    to {
+      box-shadow: 0 0 2px #c60222;
+    }
+  }
+  @keyframes greenLight8 {
+    to {
+      box-shadow: inset 0px 0px 32px #c60222;
+    }
+  }
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(-10px);
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .main {
+    width: 100%;
+    color: white;
+  }
+  .main .robo-hld {
+    height: 100vh;
+    width: 200%;
+    background-color: #000000;
+  }
+  .main .robo-hld .robo {
+    border: 5px solid black;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 200%;
+    left: -20%;
+    right: -80%;
+    margin-top: 0rem;
+    display: block;
+  }
+  .main .layer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 1rem;
+  }
+  .main .layer .layer-holder {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .main .layer .layer-holder .Sr-txt {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 2rem;
+  }
+  .main .layer .layer-holder .Sr-txt h1 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 3vw;
+    color: bisque;
+  }
+  .main .layer .layer-holder .Sr-txt h1 span {
+    color: #D2042D;
+    margin-left: 5rem;
+    font-size: 3.5vw;
+  }
+  .main .layer .layer-holder .sk-txt {
+    height: 15vh;
+    width: 40vw;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .layer .layer-holder .sk-txt h3 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 2.5vw;
+    color: bisque;
+  }
+  .main .layer .btns {
+    height: 25vh;
+    width: 60%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    margin-bottom: 6rem;
+  }
+  .main .layer .btns .btn-cont1 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .layer .btns .btn-cont2 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main .layer .btns button {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+  }
+  .main .layer .btns button #clip {
+    --color: beige;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px beige;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  .main .layer .btns button .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: beige;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+  }
+  .main .layer .btns button #leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  .main .layer .btns button #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+  }
+  .main .layer .btns button .corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: beige;
+    box-shadow: inset 1px 1px 8px beige;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  .main .layer .btns button #rightTop {
+    top: -1.98em;
+    left: 91%;
+  }
+  .main .layer .btns button #leftTop {
+    top: -1.96em;
+    left: -3em;
+  }
+  .main .layer .btns button #leftBottom {
+    top: 2.1em;
+    left: -2.15em;
+  }
+  .main .layer .btns button #rightBottom {
+    top: 45%;
+    left: 88%;
+  }
+  .main .layer .btns button:hover #rightArrow {
+    background-color: #c60222;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  .main .layer .btns button:hover #leftArrow {
+    background-color: #c60222;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  .main .layer .btns button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  .main .layer .btns button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #c60222;
+  }
+  @keyframes changeColor8 {
+    from {
+      background-color: beige;
+    }
+    to {
+      background-color: #c60222;
+    }
+  }
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px #c60222;
+    }
+    to {
+      box-shadow: 0 0 2px #c60222;
+    }
+  }
+  @keyframes greenLight8 {
+    to {
+      box-shadow: inset 0px 0px 32px #c60222;
+    }
+  }
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(-10px);
+    }
+  }
+}
+@media (min-width: 1367px) and (max-width: 1600px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    position: relative;
+  }
+  .main {
+    width: 100%;
+    color: white;
+  }
+  .main .robo-hld {
+    height: 100vh;
+    width: 200%;
+    background-color: #000000;
+  }
+  .main .robo-hld .robo {
+    border: 5px solid black;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 200%;
+    left: -20%;
+    right: -80%;
+    margin-top: 0rem;
+    display: block;
+  }
+  .main .layer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 1rem;
+  }
+  .main .layer .layer-holder {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .main .layer .layer-holder .Sr-txt {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 2rem;
+  }
+  .main .layer .layer-holder .Sr-txt h1 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 3vw;
+    color: bisque;
+  }
+  .main .layer .layer-holder .Sr-txt h1 span {
+    color: #D2042D;
+    margin-left: 5rem;
+    font-size: 3.5vw;
+  }
+  .main .layer .layer-holder .sk-txt {
+    height: 15vh;
+    width: 40vw;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .layer .layer-holder .sk-txt h3 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 2.5vw;
+    color: bisque;
+  }
+  .main .layer .btns {
+    height: 25vh;
+    width: 60%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    margin-bottom: 6rem;
+  }
+  .main .layer .btns .btn-cont1 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .layer .btns .btn-cont2 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main .layer .btns button {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+  }
+  .main .layer .btns button #clip {
+    --color: beige;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px beige;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  .main .layer .btns button .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: beige;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+  }
+  .main .layer .btns button #leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  .main .layer .btns button #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+  }
+  .main .layer .btns button .corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: beige;
+    box-shadow: inset 1px 1px 8px beige;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  .main .layer .btns button #rightTop {
+    top: -1.98em;
+    left: 91%;
+  }
+  .main .layer .btns button #leftTop {
+    top: -1.96em;
+    left: -3em;
+  }
+  .main .layer .btns button #leftBottom {
+    top: 2.1em;
+    left: -2.15em;
+  }
+  .main .layer .btns button #rightBottom {
+    top: 45%;
+    left: 88%;
+  }
+  .main .layer .btns button:hover #rightArrow {
+    background-color: #c60222;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  .main .layer .btns button:hover #leftArrow {
+    background-color: #c60222;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  .main .layer .btns button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  .main .layer .btns button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #c60222;
+  }
+  @keyframes changeColor8 {
+    from {
+      background-color: beige;
+    }
+    to {
+      background-color: #c60222;
+    }
+  }
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px #c60222;
+    }
+    to {
+      box-shadow: 0 0 2px #c60222;
+    }
+  }
+  @keyframes greenLight8 {
+    to {
+      box-shadow: inset 0px 0px 32px #c60222;
+    }
+  }
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(-10px);
+    }
+  }
+}
+@media (min-width: 1601px) and (max-width: 2000px) {
+  .main {
+    width: 100%;
+    color: white;
+  }
+  .main .robo-hld {
+    height: 100vh;
+    width: 200%;
+    background-color: #000000;
+  }
+  .main .robo-hld .robo {
+    border: 5px solid black;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 200%;
+    left: -20%;
+    right: -80%;
+    margin-top: 0rem;
+    display: block;
+  }
+  .main .layer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 1rem;
+  }
+  .main .layer .layer-holder {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .main .layer .layer-holder .Sr-txt {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 2rem;
+  }
+  .main .layer .layer-holder .Sr-txt h1 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 3vw;
+    color: bisque;
+  }
+  .main .layer .layer-holder .Sr-txt h1 span {
+    color: #D2042D;
+    margin-left: 5rem;
+    font-size: 3.5vw;
+  }
+  .main .layer .layer-holder .sk-txt {
+    height: 15vh;
+    width: 40vw;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .layer .layer-holder .sk-txt h3 {
+    font-family: "all";
+    font-weight: 100;
+    font-size: 2.5vw;
+    color: bisque;
+  }
+  .main .layer .btns {
+    height: 25vh;
+    width: 60%;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    margin-bottom: 6rem;
+  }
+  .main .layer .btns .btn-cont1 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .layer .btns .btn-cont2 {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .main .layer .btns button {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+  }
+  .main .layer .btns button #clip {
+    --color: beige;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px beige;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  .main .layer .btns button .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: beige;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+  }
+  .main .layer .btns button #leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  .main .layer .btns button #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+  }
+  .main .layer .btns button .corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: beige;
+    box-shadow: inset 1px 1px 8px beige;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  .main .layer .btns button #rightTop {
+    top: -1.98em;
+    left: 91%;
+  }
+  .main .layer .btns button #leftTop {
+    top: -1.96em;
+    left: -3em;
+  }
+  .main .layer .btns button #leftBottom {
+    top: 2.1em;
+    left: -2.15em;
+  }
+  .main .layer .btns button #rightBottom {
+    top: 45%;
+    left: 88%;
+  }
+  .main .layer .btns button:hover #rightArrow {
+    background-color: #c60222;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  .main .layer .btns button:hover #leftArrow {
+    background-color: #c60222;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  .main .layer .btns button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8, 0.2s linear 0.4s both lightEffect8;
+  }
+  .main .layer .btns button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  .main .layer .btns button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #c60222;
+  }
+  @keyframes changeColor8 {
+    from {
+      background-color: beige;
+    }
+    to {
+      background-color: #c60222;
+    }
+  }
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px #c60222;
+    }
+    to {
+      box-shadow: 0 0 2px #c60222;
+    }
+  }
+  @keyframes greenLight8 {
+    to {
+      box-shadow: inset 0px 0px 32px #c60222;
+    }
+  }
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translateX(-10px);
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

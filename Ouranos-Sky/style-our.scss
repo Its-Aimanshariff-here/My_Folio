@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  overflow: visible;
+  color: rgb(255, 255, 255);
+  
+    scroll-behavior: smooth;
+
+}
+@font-face {
+  font-family: 'all';
+  src: url('./fonts/THE\ GONjURING.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.loader{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 99;
+
+    .blk1{
+        height: 100%;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        z-index: 8;
+    }
+      .blk2{
+        height: 100%;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        z-index: 7;
+
+
+
+    }
+
+    video{
+        height: 50%;
+        width: 50%;
+        object-fit: cover;
+        background-position: center;
+        position: absolute;
+        z-index: 6;
+    }
+      
+}
+
+.fallback {
+  display: none; // hidden until loader is done
+  height: 100vh;
+  width: 100%;
+  background: black;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    color: #ff5252;
+    font-family: 'all';
+    font-weight: 100;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: gray;
+    font-family: 'all';
+     font-weight: 100;
+  }
+
+  .back-btn {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'all';
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+     font-weight: 100;
+
+    &:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    }
+  }
+}

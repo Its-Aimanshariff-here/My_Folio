@@ -1,0 +1,3419 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  //   background-color: #F0EBE3;
+  // background-color: #FFFFCC;
+  color: white;
+  // background-color: #800000;
+  background-color: black;
+  padding: 0px 10px;
+ scroll-behavior: smooth;
+
+}
+
+
+
+@font-face {
+  font-family: 'linux';
+  src: url('./fonts/linux-biolinum.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'king';
+  src: url('./fonts/kingofthieves.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$hello-count: 6;         // number of <span> inside .hello
+$hello-delay: 1.2s;        // delay between each word
+$hello-duration: $hello-count * $hello-delay; // total animation duration
+
+
+main{
+  height: 100%;
+  width: 100%;
+  
+  padding: 1rem 1rem;
+
+  nav {
+    height: 8%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+  .logo{
+      height: 100%;
+      width: 30vw;
+      background-image: url(./images/M-removebg-preview.png);
+      background-position:center;
+      background-size:cover;
+      border-radius: 25px;
+      background-color: bisque;
+      border: 5px solid black;
+  
+    }
+     
+  .ul{
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+    
+   
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
+
+   li{
+    width: 100%;
+   
+
+   }
+   a{
+    width: 100%;
+     font-size: 5vw;
+    
+   }
+  }
+
+    .hideonmobile{
+      display: none;
+    }
+  
+    ul{
+      list-style: none;
+       display: flex;
+       width:100%;
+       height: 100%;
+       justify-content: flex-end;
+       align-items: center;
+       padding-right: 2rem;
+       
+        
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          text-transform: uppercase;
+          font-size: 1.1vw;
+         }
+         a:hover{
+          color: red;
+         }
+
+        .menu-button{
+          display: block;
+
+          i{
+            font-size: 5vw;
+          }
+         }
+    }
+
+   } 
+}
+
+.hero-sec {
+    height: calc(100% - 8%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: 20px;
+
+
+
+    .Intro {
+      height: 60%;
+      width: 100%;
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+     
+     
+      
+
+      .hello {
+        position: relative;
+       
+        text-align: center;
+        height: 10%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: bisque;
+        margin-top: 15px;
+
+
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: fade $hello-duration infinite;
+          font-family: 'linux';
+          font-weight: 100;
+          color: black;
+          font-size: 4vw;
+        
+        }
+
+          @for $i from 1 through $hello-count {
+            span:nth-child(#{$i}) {
+              animation-delay: #{($i - 1) * $hello-delay};
+            }
+          }
+      }
+
+
+
+      .int {
+        height: 30%;
+        width: 100%;
+        line-height: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+       
+
+
+        h1 {
+          font-family:'king';
+          font-weight: 100;
+          font-size: 8.2vw;
+          color: red;
+           padding-left: 15px;
+           padding-top: 10px;
+
+          
+          i {
+            color: red;
+            font-family: 'linux';
+          }
+        }
+
+        h2{
+           font-family:'linux';
+          font-weight: 100;
+          font-size: 5.5vw;
+          text-align: center;
+        }
+
+      }
+
+      .paragraph{
+        height: 40%;
+        width: 100%;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: bisque;
+        text-align:center ;
+
+        
+        
+      p{
+        font-family: 'linux';
+        height: 100%;
+        width: 100%;
+        font-size: 3vw;
+        color: rgb(0, 0, 0);
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0  10px;
+
+       
+      }
+      }
+
+    }
+
+    .Intro-para {
+      height: 30%;
+      width: 100%;
+      
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      
+      video{
+        height: 100%;
+        border-radius: 25px;
+        border: 2px solid black;
+      }
+    }
+      
+}
+
+}
+.skill-sec{
+   padding: 1rem 1rem;
+  width: 100%;
+  
+  
+
+  .skill-txt{
+    height: 12vh;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-family: 'linux';
+      font-size: 7vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+  }
+
+  .skills-holder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    
+    .btn-holder{
+      width: 100%;
+     
+      .btn{
+        height: 80px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        display: flex;
+        justify-content: center;
+
+        .btn-in1{
+          height: 100%;
+          width: 15%;
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 6vw;
+    
+          }
+        }
+        .btn-in2{
+          height: 100%;
+          width: 70%;
+          
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 6vw;
+          }
+        }
+        .btn-in3{
+          height: 100%;
+          width: 20%;
+          background-color: #fff;
+          display: none;
+        }
+      }
+
+      .skill-para{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+
+
+        .dis{
+          height: 250px;
+          width: 100%;
+          padding: 10px  15px;
+         
+         
+          p{
+            font-family: 'linux';
+            font-weight: 100;
+            font-size: 4.5vw;
+            text-align: start;
+            line-height: 30px;
+          }
+        }
+
+        .lang{
+          height: 150px;
+          width: 100%;
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 10px 10px;
+          
+
+          .lang-hld{
+            height: 35px;
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px  2px;
+
+            h4{
+              font-family: 'linux';
+              font-weight: 100;
+              font-size: 3vw;
+
+            }
+          }
+        }
+      }
+    }
+    
+    
+   
+     
+    
+  }
+
+
+}
+
+.project-sec{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 1rem;
+
+
+
+  .pro-txt{
+    height: 8vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+       h1{
+      font-family: 'linux';
+      font-size: 7vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+
+    a{
+      display: none;
+    }
+  }
+
+  .projects{
+    
+    width: 100%;
+  
+
+
+    .project-Card{
+      height: fit-content;
+      width: 100%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      background-color: #2C2E2D;
+      padding: 1px  1px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .click-txt{
+        height: 3vh;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5{
+          font-size: 4vw;
+          font-family: 'linux';
+          font-weight: 200;
+          color: bisque;
+        }
+      }
+      video{
+        height: 100%;
+        width: 100%;
+       border-radius: 25px;
+      }
+    }
+
+    #project02{
+      background-color: black;
+    }
+     #project03{
+      background-color: #513B34;
+    }
+     #project04{
+      background-color: black;
+    }
+       #project05{
+      background-color: black;
+    }
+  }
+}
+
+.abt-txt{
+  height: 30vh;
+  width: 100%;
+  padding: 1rem 1rem;
+ 
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1{
+    font-size: 3.5vh;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: bisque;
+  
+    span{
+      color: red;
+      font-size: 4vh;
+    }
+    
+  }
+  h4{
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+    color: black;
+    font-family: 'linux';
+    font-weight: 500;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 7vh;
+    width: 100%;
+    padding: 5px  5px;
+    display: flex;
+    align-items: center;
+    font-size: 3.5vw;
+    background-color: bisque;
+
+  }
+}
+
+.My-info{
+  width: 100%;
+  padding: 0rem 1rem;
+  
+
+
+  .split-line{
+    width: 100%;
+    font-family: 'linux';
+    font-size: 5vw;
+    margin-top: 2rem;
+    font-weight: 100;
+    
+
+    .line{
+      display: flex;
+      width: 100%;
+      gap:5px;
+      padding: 5px  5px;
+      justify-content: start;
+
+     .words{
+      height: fit-content;
+      color: rgba(128, 128, 128, 0.423);
+      
+     }
+    }
+  }
+
+}
+
+.footer-sec{
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: bisque;
+
+  .footer{
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    
+  
+
+    .ft-txt1{
+      height: 15vh;
+      width: 100%;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+
+      h1{
+        font-size: 12vw;
+        font-family: 'linux';
+
+      }
+    }
+
+    .ft-txt2{
+      height: 55vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      
+
+      .ft-sub1{
+        height: 13vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+        
+
+        h3{
+          font-size: 3vw;
+          color: rgba(255, 255, 255, 0.723);
+          font-family: 'linux';
+        }
+        a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          font-size: 3vw;
+        }
+      }
+
+      .ft-sub2{
+        height: 32vh;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+        
+
+       h3{
+          font-size: 4vw;
+          color: rgba(255, 255, 255, 0.827);
+          font-family: 'linux';
+        }
+
+       .social{
+        height: 30vh;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-size: 5vw;
+        }
+       }
+      }
+
+    
+    }
+      .ft-sub3{
+        height: 10vh;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 25px;
+        padding: 10px 10px;
+        border: 2px solid black;
+        
+
+        .logo{
+          height: 50%;
+          width: 100%;
+      
+
+          .logo-img{
+            height: 100%;
+            width: 70%;
+           background-image: url(./images/M-removebg-preview.png);
+           background-size: cover;
+           background-position: center;
+          
+
+           
+          }
+        }
+        .copyright{
+          height: 50%;
+          width: 100%;
+          color: black;
+          font-family: 'linux';
+          display: flex;
+          align-items: end;
+          justify-content: center;
+
+          i{
+            color: black;
+          }
+        }
+      }
+  }
+}
+
+
+
+
+
+@keyframes fade {
+
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  20%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% {  opacity: 0; }
+
+}
+
+
+@media (min-width: 700px) and (max-width:1023px){
+   main{
+    height: 100%;
+    width: 100%;
+    padding: 1rem  5rem;
+    
+  nav {
+    height: 10%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+
+      .logo{
+      height: 100%;
+      width: 30vw;
+      background-image: url(./images/M-removebg-preview.png);
+      background-position:center;
+      background-size:cover;
+      border-radius: 25px;
+      background-color: bisque;
+      border: 5px solid black;
+  
+    }
+     
+  .ul{
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+    
+   
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
+
+   li{
+    width: 100%;
+   
+
+   }
+   a{
+    width: 100%;
+     font-size: 3vw;
+    
+   }
+  }
+
+    .hideonmobile{
+      display: none;
+    }
+  
+    ul{
+      list-style: none;
+       display: flex;
+       width:100%;
+       height: 100%;
+       justify-content: flex-end;
+       align-items: center;
+       padding-right: 2rem;
+       
+        
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          text-transform: uppercase;
+          font-size: 1.1vw;
+         }
+         a:hover{
+          color: red;
+         }
+
+        .menu-button{
+          display: block;
+
+          i{
+            font-size: 4vw;
+          }
+         }
+    }
+
+   }
+    
+ 
+  }
+
+   .hero-sec {
+    height: calc(100% - 10%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: 20px;
+
+
+
+    .Intro {
+      height: 100%;
+      width: 100%;
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+     
+     
+      
+
+      .hello {
+        position: relative;
+        text-align: center;
+        height: 8%;
+        width: 22%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: bisque;
+        margin-top: 15px;
+
+
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: fade $hello-duration infinite;
+          font-family: 'linux';
+          font-weight: 100;
+          color: black;
+          font-size: 2vw;
+        
+        }
+
+          @for $i from 1 through $hello-count {
+            span:nth-child(#{$i}) {
+              animation-delay: #{($i - 1) * $hello-delay};
+            }
+          }
+      }
+
+
+
+      .int {
+        height: 42%;
+        width: 100%;
+        line-height: 30px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+       
+
+
+        h1 {
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 100;
+          font-size: 8vw;
+          color: red;
+           padding-left: 15px;
+           padding-top: 10px;
+           text-align: start;
+
+          
+          i {
+            color: red;
+            font-family: 'linux';
+          }
+        }
+
+        h2{
+           font-family:'linux';
+          font-weight: 100;
+          font-size: 5.5vw;
+          text-align: start;
+        }
+
+     
+      }
+
+
+      .paragraph{
+        height: 25%;
+        width: 60%;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: bisque;
+        text-align:center ;
+        margin-left: 50%;
+
+
+        
+        
+      p{
+        font-family: 'linux';
+        height: 100%;
+        width: 100%;
+        font-size: 1.5vw;
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0  10px;
+
+       
+      }
+      }
+
+    }
+
+    .Intro-para {
+      height: 40%;
+      width: 100%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: none;
+      
+        }
+      
+  }
+  }
+  .skill-sec{
+  padding: 1rem  8rem;
+  width: 100%;
+  
+  
+
+  .skill-txt{
+    height: 12vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+  }
+
+  .skills-holder{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    
+    flex-direction: column;
+    
+    .btn-holder{
+      width: 80%;
+      cursor: pointer;
+      margin-right: 3rem;
+
+     
+      .btn{
+        height: 80px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .btn-in1{
+          height: 100%;
+          width: 15%;
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2.5vw;
+    
+          }
+        }
+        .btn-in2{
+          height: 100%;
+          width: 70%;
+          
+          display: flex;
+          align-items:center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2.5vw;
+          }
+        }
+        .btn-in3{
+          height: 100%;
+          width: 20%;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i{
+            font-size: 2vw;
+            font-weight: 100;
+          }
+
+        }
+      }
+
+      .skill-para{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        padding-top: 2rem;
+       
+
+
+        .dis{
+          height: 185px;
+          width: 100%;
+          padding: 10px  15px;
+         
+
+         
+         
+          p{
+            font-family: 'linux';
+            font-weight: 100;
+            font-size: 1.5vw;
+            text-align: start;
+            line-height: 30px;
+          }
+        }
+
+        .lang{
+          height: 100px;
+          width: 100%;
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 10px 10px;
+          
+
+          .lang-hld{
+            height: 35px;
+            width: 120px;
+            
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px  2px;
+
+            h4{
+              font-family: 'linux';
+              font-weight: 100;
+              font-size: 1vw;
+
+            }
+          }
+        }
+      }
+    }
+    
+    
+   
+     
+    
+  }
+
+
+}
+  .project-sec{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem  8rem;
+
+
+
+  .pro-txt{
+    height: 8vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+       h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+
+    a{
+      display: block;
+      color: bisque;
+    }
+  }
+
+  .projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    
+  
+
+
+    .project-Card{
+      height: fit-content;
+      width: 80%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      background-color: #2C2E2D;
+      padding: 1px  1px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1rem;
+      
+
+      .click-txt{
+        height: 3vh;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5{
+          font-size: 2vw;
+          font-family: 'linux';
+          font-weight: 200;
+          color: bisque;
+        }
+      }
+      video{
+        height: 80%;
+        width: 100%;
+        border-radius: 25px;
+       
+      }
+    }
+
+    #project02{
+      background-color: black;
+    }
+     #project03{
+      background-color: #513B34;
+    }
+     #project04{
+      background-color: black;
+    }
+       #project05{
+      background-color: black;
+    }
+  }
+}
+
+.My-info{
+  width: 100%;
+  padding: 1rem  8rem;
+  display: flex;
+  
+
+
+  .split-line{
+    width: 100%;
+    font-family: 'linux';
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+   
+    
+
+    .line{
+      display: flex;
+      width: 100%;
+      gap:5px;
+      padding: 5px  5px;
+      justify-content: start;
+
+     .words{
+      height: fit-content;
+      color: rgba(128, 128, 128, 0.347);
+      
+     }
+    }
+  }
+
+}
+
+
+.footer-sec{
+  height: 90vh;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: bisque;
+  
+
+  .footer{
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem  8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  
+
+    .ft-txt1{
+      height: 15vh;
+      width: 100%;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+
+      h1{
+        font-size: 5vw;
+        font-family: 'linux';
+
+      }
+    }
+
+    .ft-txt2{
+      height:40vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      
+
+      .ft-sub1{
+        height: 13vh;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+        
+
+        h3{
+          font-size: 1vw;
+          color: rgba(255, 255, 255, 0.723);
+          font-family: 'linux';
+        }
+        a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          font-size: 2vw;
+        }
+      }
+
+      .ft-sub2{
+        height: 32vh;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+       
+        
+
+       h3{
+          font-size: 1.2vw;
+          color: rgba(255, 255, 255, 0.827);
+          font-family: 'linux';
+        }
+
+       .social{
+        height: 30vh;
+        width: 100%;
+        margin-left: 13rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-size: 1.5vw;
+        }
+       }
+      }
+
+      
+    }
+
+    .ft-sub3{
+        height: 15vh;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 25px;
+        padding: 10px 10px;
+       
+        
+
+        .logo{
+          height: 50%;
+          width: 50%;
+      
+
+          .logo-img{
+            height: 100%;
+            width: 50%;
+           background-image: url(./images/M-removebg-preview.png);
+           background-size: cover;
+           background-position: center;
+          
+
+           
+          }
+        }
+        .copyright{
+          height: 50%;
+          width: 100%;
+          color: black;
+          font-family: 'linux';
+          display: flex;
+          align-items: end;
+          justify-content: center;
+
+          i{
+            color: black;
+          }
+        }
+      }
+  }
+
+
+
+}
+
+}
+
+@media (min-width: 1024px) and (max-width:1366px){
+   main{
+    height: 100%;
+    width: 100%;
+    padding: 1rem  8rem;
+    
+  nav {
+    height: 8%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+
+     .logo{
+      height: 100%;
+      width: 15vw;
+      background-image: url(./images/M-removebg-preview.png);
+      background-position:center;
+      background-size:cover;
+      border-radius: 25px;
+      background-color: bisque;
+      border: 5px solid black;
+  
+    }
+
+  .ul{
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+   
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
+
+   li{
+    width: 100%;
+
+   }
+   a{
+    width: 100%;
+    
+   }
+  }
+
+  
+    ul{
+      list-style: none;
+       display: flex;
+       width:100%;
+       height: 100%;
+       justify-content: space-evenly;
+       align-items: center;
+       
+        
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          text-transform: uppercase;
+          font-size: 1.1vw;
+         }
+         a:hover{
+          color: red;
+         }
+
+    .hideonmobile{
+      display: block;
+      }
+
+         .menu-button{
+          display: none;
+         }
+
+    }
+
+   }
+  }
+
+   .hero-sec {
+    height: calc(100% - 8%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: 20px;
+
+
+
+    .Intro {
+      height: 100%;
+      width: 100%;
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+     
+     
+      
+
+      .hello {
+        position: relative;
+        text-align: center;
+        height: 8%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: bisque;
+        margin-top: 15px;
+
+
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: fade $hello-duration infinite;
+          font-family: 'linux';
+          font-weight: 100;
+          color: black;
+          font-size: 1.5vw;
+        
+        }
+
+          @for $i from 1 through $hello-count {
+            span:nth-child(#{$i}) {
+              animation-delay: #{($i - 1) * $hello-delay};
+            }
+          }
+      }
+
+
+
+      .int {
+        height: 42%;
+        width: 100%;
+        line-height: 35px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+       
+
+
+        h1 {
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 100;
+          font-size: 6.5vw;
+          color: red;
+           padding-left: 15px;
+           padding-top: 10px;
+           text-align: start;
+
+          
+          i {
+            color: red;
+            font-family: 'linux';
+          }
+        }
+
+        h2{
+           font-family:'linux';
+          font-weight: 100;
+          font-size: 4.5vw;
+          text-align: start;
+        }
+
+     
+      }
+
+
+      .paragraph{
+        height: 30%;
+        width: 50%;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: bisque;
+        text-align:center ;
+        margin-left: 50%;
+
+
+        
+        
+      p{
+        font-family: 'linux';
+        height: 100%;
+        width: 100%;
+        font-size: 1.2vw;
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0  10px;
+
+       
+      }
+      }
+
+    }
+
+    .Intro-para {
+      height: 40%;
+      width: 100%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: none;
+      
+        }
+      
+  }
+  }
+
+  .skill-sec{
+  padding: 1rem  8rem;
+  width: 100%;
+  
+  
+
+  .skill-txt{
+    height: 12vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+  }
+
+  .skills-holder{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    
+    flex-direction: column;
+    
+    .btn-holder{
+      width: 60%;
+      cursor: pointer;
+      margin-right: 5rem;
+     
+      .btn{
+        height: 80px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        display: flex;
+        justify-content: center;
+
+        .btn-in1{
+          height: 100%;
+          width: 15%;
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+    
+          }
+        }
+        .btn-in2{
+          height: 100%;
+          width: 70%;
+          
+          display: flex;
+          align-items:center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+          }
+        }
+        .btn-in3{
+          height: 100%;
+          width: 20%;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i{
+            font-size: 2vw;
+            font-weight: 100;
+          }
+
+        }
+      }
+
+      .skill-para{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        padding-top: 2rem;
+       
+
+
+        .dis{
+          height: 150px;
+          width: 100%;
+          padding: 10px  15px;
+         
+
+         
+         
+          p{
+            font-family: 'linux';
+            font-weight: 100;
+            font-size: 1.3vw;
+            text-align: start;
+            line-height: 30px;
+          }
+        }
+
+        .lang{
+          height: 100px;
+          width: 100%;
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 10px 10px;
+          
+
+          .lang-hld{
+            height: 35px;
+            width: 120px;
+            
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px  2px;
+
+            h4{
+              font-family: 'linux';
+              font-weight: 100;
+              font-size: 1vw;
+
+            }
+          }
+        }
+      }
+    }
+    
+    
+   
+     
+    
+  }
+
+
+}
+
+
+  .project-sec{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem  8rem;
+
+
+
+  .pro-txt{
+    height: 8vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+       h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+
+    a{
+      display: block;
+      color: bisque;
+    }
+  }
+
+  .projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    
+  
+
+
+    .project-Card{
+      height:70vh;
+      width: 80%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      background-color: #2C2E2D;
+      padding: 1px  1px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4rem;
+      
+
+      .click-txt{
+        height: 3vh;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5{
+          font-size: 1.5vw;
+          font-family: 'linux';
+          font-weight: 200;
+          color: bisque;
+        }
+      }
+      video{
+        height: 80%;
+        width: 100%;
+       
+      }
+    }
+
+    #project02{
+      background-color: black;
+    }
+     #project03{
+      background-color: #513B34;
+    }
+     #project04{
+      background-color: black;
+    }
+       #project05{
+      background-color: black;
+    }
+  }
+}
+
+.My-info{
+  width: 100%;
+  padding: 1rem  8rem;
+  display: flex;
+  
+
+
+  .split-line{
+    width: 100%;
+    font-family: 'linux';
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+   
+    
+
+    .line{
+      display: flex;
+      width: 100%;
+      gap:5px;
+      padding: 5px  5px;
+      justify-content: start;
+
+     .words{
+      height: fit-content;
+      color: rgba(128, 128, 128, 0.347);
+      
+     }
+    }
+  }
+
+}
+
+}
+
+@media (min-width: 1367px) and (max-width:1600px){
+
+  main{
+    height: 100%;
+    width: 100%;
+    padding: 1rem  8rem;
+    
+  nav {
+    height: 10%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+      .logo{
+      height: 100%;
+      width: 15vw;
+      background-image: url(./images/M-removebg-preview.png);
+      background-position:center;
+      background-size:cover;
+      border-radius: 25px;
+      background-color: bisque;
+      border: 5px solid black;
+  
+    }
+
+  .ul{
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+   
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
+
+   li{
+    width: 100%;
+
+   }
+   a{
+    width: 100%;
+    
+   }
+  }
+
+  
+    ul{
+      list-style: none;
+       display: flex;
+       width:100%;
+       height: 100%;
+       justify-content: space-evenly;
+       align-items: center;
+       
+        
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          text-transform: uppercase;
+          font-size: 1.1vw;
+         }
+         a:hover{
+          color: red;
+         }
+
+    .hideonmobile{
+      display: block;
+      }
+
+         .menu-button{
+          display: none;
+         }
+
+    }
+
+   }
+
+  }
+ 
+
+   .hero-sec {
+    height: calc(100% - 10%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: 20px;
+
+
+
+    .Intro {
+      height: 100%;
+      width: 100%;
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+     
+     
+      
+
+      .hello {
+        position: relative;
+        text-align: center;
+        height: 8%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: bisque;
+        margin-top: 15px;
+       
+
+
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: fade $hello-duration infinite;
+          font-family: 'linux';
+          font-weight: 100;
+          color: black;
+          font-size: 1.5vw;
+        
+        }
+
+          @for $i from 1 through $hello-count {
+            span:nth-child(#{$i}) {
+              animation-delay: #{($i - 1) * $hello-delay};
+            }
+          }
+
+  
+      }
+
+    
+
+
+      .int {
+        height: 42%;
+        width: 100%;
+        line-height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+        
+       
+
+
+        h1 {
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 100;
+          font-size: 6.5vw;
+          color: red;
+           padding-left: 15px;
+           padding-top: 10px;
+           text-align: start;
+
+          
+          i {
+            color: red;
+            font-family: 'linux';
+          }
+        }
+
+        h2{
+           font-family:'linux';
+          font-weight: 100;
+          font-size: 4.5vw;
+          text-align: start;
+        }
+
+       
+     
+      }
+
+
+      .paragraph{
+        height: 30%;
+        width: 50%;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: bisque;
+        text-align:center ;
+        margin-left: 50%;
+
+
+        
+        
+      p{
+        font-family: 'linux';
+        height: 100%;
+        width: 100%;
+        font-size: 1.2vw;
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0  10px;
+
+       
+      }
+      }
+
+    }
+
+    .Intro-para {
+      height: 40%;
+      width: 100%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: none;
+      
+        }
+      
+  }
+  }
+
+  .skill-sec{
+  padding: 1rem  8rem;
+  width: 100%;
+  
+  
+
+  .skill-txt{
+    height: 12vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+  }
+
+  .skills-holder{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    
+    flex-direction: column;
+    
+    .btn-holder{
+      width: 60%;
+      cursor: pointer;
+      margin-right: 5rem;
+     
+      .btn{
+        height: 80px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        display: flex;
+        justify-content: center;
+
+        .btn-in1{
+          height: 100%;
+          width: 15%;
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+    
+          }
+        }
+        .btn-in2{
+          height: 100%;
+          width: 70%;
+          
+          display: flex;
+          align-items:center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+          }
+        }
+        .btn-in3{
+          height: 100%;
+          width: 20%;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i{
+            font-size: 2vw;
+            font-weight: 100;
+          }
+
+        }
+      }
+
+      .skill-para{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        padding-top: 2rem;
+       
+
+
+        .dis{
+          height: 150px;
+          width: 100%;
+          padding: 10px  15px;
+         
+
+         
+         
+          p{
+            font-family: 'linux';
+            font-weight: 100;
+            font-size: 1.3vw;
+            text-align: start;
+            line-height: 30px;
+          }
+        }
+
+        .lang{
+          height: 100px;
+          width: 100%;
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 10px 10px;
+          
+
+          .lang-hld{
+            height: 35px;
+            width: 120px;
+            
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px  2px;
+
+            h4{
+              font-family: 'linux';
+              font-weight: 100;
+              font-size: 1vw;
+
+            }
+          }
+        }
+      }
+    }
+    
+    
+   
+     
+    
+  }
+
+
+  }
+
+  .project-sec{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem  8rem;
+
+
+
+  .pro-txt{
+    height: 8vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+       h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+
+    a{
+      display: block;
+      color: bisque;
+    }
+  }
+
+  .projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    
+  
+
+
+    .project-Card{
+      height: 70vh;
+      width: 80%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      background-color: #2C2E2D;
+      padding: 1px  1px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 3rem;
+      
+
+      .click-txt{
+        height: 3vh;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5{
+          font-size: 2vw;
+          font-family: 'linux';
+          font-weight: 200;
+          color: bisque;
+        }
+      }
+      video{
+        height: 80%;
+        width: 100%;
+       
+      }
+    }
+
+    #project02{
+      background-color: black;
+    }
+     #project03{
+      background-color: #513B34;
+    }
+     #project04{
+      background-color: black;
+    }
+       #project05{
+      background-color: black;
+    }
+  }
+}
+
+.abt-txt{
+  margin-top: 1rem;
+  height: 50vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   padding: 1rem  8rem;
+
+  h1{
+    font-size: 10vh;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: bisque;
+  
+    span{
+      color: red;
+      font-size: 13vh;
+    }
+    
+  }
+  h3{
+    font-size: 4vw;
+    font-family: 'linux';
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  h4{
+    text-align: start;
+    font-size: 2.5vw;
+    font-family: 'linux';
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 22rem;
+  }
+
+  p{
+    text-align: center;
+    color: black;
+    font-family: 'linux';
+    font-weight: 200;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 10vh;
+    width: 70%;
+    padding: 15px  15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vw;
+    background-color: bisque;
+
+  }
+}
+
+.My-info{
+  width: 100%;
+  padding: 1rem  8rem;
+  display: flex;
+  
+
+
+  .split-line{
+    width: 100%;
+    font-family: 'linux';
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+   
+    
+
+    .line{
+      display: flex;
+      width: 100%;
+      gap:5px;
+      padding: 5px  5px;
+      justify-content: start;
+
+     .words{
+      height: fit-content;
+      color: rgba(128, 128, 128, 0.347);
+      
+     }
+    }
+  }
+
+}
+
+.footer-sec{
+  height: 90vh;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: bisque;
+  
+
+  .footer{
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem  8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  
+
+    .ft-txt1{
+      height: 15vh;
+      width: 100%;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+
+      h1{
+        font-size: 5vw;
+        font-family: 'linux';
+
+      }
+    }
+
+    .ft-txt2{
+      height:40vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      
+
+      .ft-sub1{
+        height: 13vh;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+        
+
+        h3{
+          font-size: 1vw;
+          color: rgba(255, 255, 255, 0.723);
+          font-family: 'linux';
+        }
+        a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          font-size: 2vw;
+        }
+      }
+
+      .ft-sub2{
+        height: 32vh;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+       
+        
+
+       h3{
+          font-size: 1.2vw;
+          color: rgba(255, 255, 255, 0.827);
+          font-family: 'linux';
+        }
+
+       .social{
+        height: 30vh;
+        width: 100%;
+        margin-left: 13rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-size: 1.5vw;
+        }
+       }
+      }
+
+      
+    }
+
+    .ft-sub3{
+        height: 15vh;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 25px;
+        padding: 10px 10px;
+       
+        
+
+        .logo{
+          height: 50%;
+          width: 50%;
+      
+
+          .logo-img{
+            height: 100%;
+            width: 50%;
+           background-image: url(./images/M-removebg-preview.png);
+           background-size: cover;
+           background-position: center;
+          
+
+           
+          }
+        }
+        .copyright{
+          height: 50%;
+          width: 100%;
+          color: black;
+          font-family: 'linux';
+          display: flex;
+          align-items: end;
+          justify-content: center;
+
+          i{
+            color: black;
+          }
+        }
+      }
+  }
+
+
+}
+
+}
+
+@media (min-width: 1600px) and (max-width:2560px){
+
+    main{
+    height: 100%;
+    width: 100%;
+    padding: 1rem  8rem;
+    
+  nav {
+    height: 8%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+      .logo{
+      height: 100%;
+      width: 15vw;
+      background-image: url(./images/M-removebg-preview.png);
+      background-position:center;
+      background-size:cover;
+      border-radius: 25px;
+      background-color: bisque;
+      border: 5px solid black;
+  
+    }
+
+  .ul{
+    height: 100%;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    border: 5px solid black;
+   
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: none;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(2px);
+
+   li{
+    width: 100%;
+
+   }
+   a{
+    width: 100%;
+    
+   }
+  }
+
+  
+    ul{
+      list-style: none;
+       display: flex;
+       width:100%;
+       height: 100%;
+       justify-content: space-evenly;
+       align-items: center;
+       
+        
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          text-transform: uppercase;
+          font-size: 1.1vw;
+         }
+         a:hover{
+          color: red;
+         }
+
+    .hideonmobile{
+      display: block;
+      }
+
+         .menu-button{
+          display: none;
+         }
+
+    }
+
+   }
+
+  }
+ 
+
+   .hero-sec {
+    height: calc(100% - 10%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-top: 20px;
+
+
+
+    .Intro {
+      height: 100%;
+      width: 100%;
+     
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+     
+     
+      
+
+      .hello {
+        position: relative;
+        text-align: center;
+        height: 8%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        border-radius: 50px;
+        background-color: bisque;
+        margin-top: 15px;
+       
+
+
+        span {
+          position: absolute;
+          opacity: 0;
+          animation: fade $hello-duration infinite;
+          font-family: 'linux';
+          font-weight: 100;
+          color: black;
+          font-size: 1.5vw;
+        
+        }
+
+          @for $i from 1 through $hello-count {
+            span:nth-child(#{$i}) {
+              animation-delay: #{($i - 1) * $hello-delay};
+            }
+          }
+
+  
+      }
+
+    
+
+
+      .int {
+        height: 42%;
+        width: 100%;
+        line-height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+        
+       
+
+
+        h1 {
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 100;
+          font-size: 6.5vw;
+          color: red;
+           padding-left: 15px;
+           padding-top: 10px;
+           text-align: start;
+
+          
+          i {
+            color: red;
+            font-family: 'linux';
+          }
+        }
+
+        h2{
+           font-family:'linux';
+          font-weight: 100;
+          font-size: 4.5vw;
+          text-align: start;
+        }
+
+       
+     
+      }
+
+
+      .paragraph{
+        height: 30%;
+        width: 50%;
+        border-radius: 25px;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: bisque;
+        text-align:center ;
+        margin-left: 50%;
+
+
+        
+        
+      p{
+        font-family: 'linux';
+        height: 100%;
+        width: 100%;
+        font-size: 1.2vw;
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0  10px;
+
+       
+      }
+      }
+
+    }
+
+    .Intro-para {
+      height: 40%;
+      width: 100%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      display: none;
+      
+        }
+      
+  }
+  }
+
+  .skill-sec{
+  padding: 1rem  8rem;
+  width: 100%;
+  
+  
+
+  .skill-txt{
+    height: 12vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+  }
+
+  .skills-holder{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    
+    flex-direction: column;
+    
+    .btn-holder{
+      width: 60%;
+      cursor: pointer;
+      margin-right: 5rem;
+     
+      .btn{
+        height: 80px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        display: flex;
+        justify-content: center;
+
+        .btn-in1{
+          height: 100%;
+          width: 15%;
+          display: flex;
+          align-items: center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+    
+          }
+        }
+        .btn-in2{
+          height: 100%;
+          width: 70%;
+          
+          display: flex;
+          align-items:center;
+
+          h1{
+            font-family: 'linux';
+            font-size: 2vw;
+          }
+        }
+        .btn-in3{
+          height: 100%;
+          width: 20%;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i{
+            font-size: 2vw;
+            font-weight: 100;
+          }
+
+        }
+      }
+
+      .skill-para{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        padding-top: 2rem;
+       
+
+
+        .dis{
+          height: 150px;
+          width: 100%;
+          padding: 10px  15px;
+         
+
+         
+         
+          p{
+            font-family: 'linux';
+            font-weight: 100;
+            font-size: 1.3vw;
+            text-align: start;
+            line-height: 30px;
+          }
+        }
+
+        .lang{
+          height: 100px;
+          width: 100%;
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 10px 10px;
+          
+
+          .lang-hld{
+            height: 35px;
+            width: 120px;
+            
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px  2px;
+
+            h4{
+              font-family: 'linux';
+              font-weight: 100;
+              font-size: 1vw;
+
+            }
+          }
+        }
+      }
+    }
+    
+    
+   
+     
+    
+  }
+
+
+  }
+
+  .project-sec{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem  8rem;
+
+
+
+  .pro-txt{
+    height: 8vh;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+       h1{
+      font-family: 'linux';
+      font-size: 4vw;
+      font-weight: 100;
+      color: bisque;
+
+      i{
+        font-weight: 100;
+      }
+      
+    }
+
+    a{
+      display: block;
+      color: bisque;
+    }
+  }
+
+  .projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    
+  
+
+
+    .project-Card{
+      height: 70vh;
+      width: 80%;
+      border: 2px solid bisque;
+      border-radius: 25px;
+      background-color: #2C2E2D;
+      padding: 1px  1px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 3rem;
+      
+
+      .click-txt{
+        height: 3vh;
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5{
+          font-size: 2vw;
+          font-family: 'linux';
+          font-weight: 200;
+          color: bisque;
+        }
+      }
+      video{
+        height: 80%;
+        width: 100%;
+       
+      }
+    }
+
+    #project02{
+      background-color: black;
+    }
+     #project03{
+      background-color: #513B34;
+    }
+     #project04{
+      background-color: black;
+    }
+       #project05{
+      background-color: black;
+    }
+  }
+}
+
+.abt-txt{
+  margin-top: 1rem;
+  height: 50vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   padding: 1rem  8rem;
+
+  h1{
+    font-size: 10vh;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: bisque;
+  
+    span{
+      color: red;
+      font-size: 13vh;
+    }
+    
+  }
+  h3{
+    font-size: 4vw;
+    font-family: 'linux';
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  h4{
+    text-align: start;
+    font-size: 2.5vw;
+    font-family: 'linux';
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-left: 22rem;
+  }
+
+  p{
+    text-align: center;
+    color: black;
+    font-family: 'linux';
+    font-weight: 200;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 10vh;
+    width: 70%;
+    padding: 15px  15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vw;
+    background-color: bisque;
+
+  }
+}
+
+.My-info{
+  width: 100%;
+  padding: 1rem  8rem;
+  display: flex;
+  
+
+
+  .split-line{
+    width: 100%;
+    font-family: 'linux';
+    font-size: 2vw;
+    margin-top: 2rem;
+    font-weight: 100;
+   
+    
+
+    .line{
+      display: flex;
+      width: 100%;
+      gap:5px;
+      padding: 5px  5px;
+      justify-content: start;
+
+     .words{
+      height: fit-content;
+      color: rgba(128, 128, 128, 0.347);
+      
+     }
+    }
+  }
+
+}
+
+.footer-sec{
+  height: 90vh;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: bisque;
+  
+
+  .footer{
+    height: 80vh;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: black;
+    padding: 1rem  8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  
+
+    .ft-txt1{
+      height: 15vh;
+      width: 100%;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+
+      h1{
+        font-size: 5vw;
+        font-family: 'linux';
+
+      }
+    }
+
+    .ft-txt2{
+      height:40vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      
+
+      .ft-sub1{
+        height: 13vh;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+        
+
+        h3{
+          font-size: 1vw;
+          color: rgba(255, 255, 255, 0.723);
+          font-family: 'linux';
+        }
+        a{
+          text-decoration: none;
+          color: bisque;
+          font-family: 'linux';
+          font-size: 2vw;
+        }
+      }
+
+      .ft-sub2{
+        height: 32vh;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 10px;
+       
+       
+        
+
+       h3{
+          font-size: 1.2vw;
+          color: rgba(255, 255, 255, 0.827);
+          font-family: 'linux';
+        }
+
+       .social{
+        height: 30vh;
+        width: 100%;
+        margin-left: 13rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+
+         a{
+          text-decoration: none;
+          color: bisque;
+          font-size: 1.5vw;
+        }
+       }
+      }
+
+      
+    }
+
+    .ft-sub3{
+        height: 15vh;
+        width: 100%;
+        background-color: bisque;
+        border-radius: 25px;
+        padding: 10px 10px;
+       
+        
+
+        .logo{
+          height: 50%;
+          width: 50%;
+      
+
+          .logo-img{
+            height: 100%;
+            width: 50%;
+           background-image: url(./images/M-removebg-preview.png);
+           background-size: cover;
+           background-position: center;
+          
+
+           
+          }
+        }
+        .copyright{
+          height: 50%;
+          width: 100%;
+          color: black;
+          font-family: 'linux';
+          display: flex;
+          align-items: end;
+          justify-content: center;
+
+          i{
+            color: black;
+          }
+        }
+      }
+  }
+
+
+}
+}
